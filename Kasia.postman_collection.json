@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "fc8f107e-61e9-4166-868a-5e99889a4c84",
+		"name": "Kasia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14535389"
+	},
+	"item": [
+		{
+			"name": "Kasia - /api/user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Juan Angel\",\r\n    \"lastName\": \"Montoya Agudelo\",\r\n    \"email\": \"juanangel.montoya56@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"createdAt\": \"2012-04-23T18:25:43.511Z\",\r\n    \"updatedAt\": \"2012-04-24T18:25:43.511Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/api/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kasia - /api/users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:9001/api/user/users/52/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"user",
+						"users",
+						"52",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kasia - /api/user/email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001/api/user/email/colombo121111@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"user",
+						"email",
+						"colombo121111@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kasia - api/post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"views\": 1,\r\n    \"title\": \"TEST OF POST TITTLE\",\r\n    \"body\": \"TEST OF POST BODY\",\r\n    \"createdAt\": \"2023-01-19T18:25:43.511Z\",\r\n    \"updatedAt\": \"2023-01-19T18:25:43.511Z\",\r\n    \"user\": {\r\n        \"id\":543\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/api/post/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"post",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "kasia - api/post/view",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001/api/post/view/201",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"post",
+						"view",
+						"201"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kasia - api/post/posts/0/10/543",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001/api/post/posts/0/10/64",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"post",
+						"posts",
+						"0",
+						"10",
+						"64"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kasia - api/comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"body\": \"This is a comment for TEST\",\r\n    \"idPost\": 201,\r\n    \"idUser\": 543\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/api/comment/createComment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"comment",
+						"createComment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
